@@ -1,19 +1,63 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="es-AR">
 <head>
 
   <!-- ** Basic Page Needs ** -->
   <meta charset="utf-8">
-  <title>El Espejo | Espacio Psicoterapéutico</title>
+  <title>El Espejo | Espacio Psicoterapéutico - Río Cuarto, Córdoba</title>
   <!-- Css fuentes -->
-  <link rel="stylesheet" href="css/fonts.css" >
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-  <!-- ** Mobile Specific Metas ** -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- ** SEO & Meta ** -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="EL Espejo - Espacio Psicoterapéutico">
+  <meta name="description" content="El Espejo es un espacio psicoterapéutico en Río Cuarto, Córdoba. Psicología, Psicopedagogía y Terapia Floral. Atención individual, grupal y de pareja. Turnos: (3585) 185508.">
+  <meta name="keywords" content="psicólogo Río Cuarto, psicoterapia Río Cuarto, salud mental Córdoba, terapia gestalt, psicopedagogía, terapia floral, psicoanálisis, El Espejo">
+  <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <meta name="author" content="Dynamo Studios">
+  <meta name="author" content="El Espejo - Espacio Psicoterapéutico">
+  <meta name="theme-color" content="#3a7ca5">
+  <link rel="canonical" href="https://juanmanuelcantero.github.io/el_espejo/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://juanmanuelcantero.github.io/el_espejo/">
+  <meta property="og:title" content="El Espejo | Espacio Psicoterapéutico - Río Cuarto, Córdoba">
+  <meta property="og:description" content="Psicología, Psicopedagogía y Terapia Floral en Río Cuarto. Atención individual, grupal y de pareja. Contactanos: (3585) 185508.">
+  <meta property="og:image" content="images/logo/EL_ESPEJO_ISOLOGO_H_320px.png">
+  <meta property="og:locale" content="es_AR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="El Espejo | Espacio Psicoterapéutico - Río Cuarto">
+  <meta name="twitter:description" content="Psicología, Psicopedagogía y Terapia Floral en Río Cuarto, Córdoba.">
+  <meta name="twitter:image" content="images/logo/EL_ESPEJO_ISOLOGO_H_320px.png">
+
+  <!-- Schema.org: LocalBusiness / MedicalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "El Espejo - Espacio Psicoterapéutico",
+    "description": "Espacio psicoterapéutico en Río Cuarto, Córdoba. Psicología, Psicopedagogía y Terapia Floral.",
+    "url": "https://juanmanuelcantero.github.io/el_espejo/",
+    "telephone": "+543585185508",
+    "email": "info@centroelespejo.com.ar",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "9 de Julio 202",
+      "addressLocality": "Río Cuarto",
+      "addressRegion": "Córdoba",
+      "addressCountry": "AR"
+    },
+    "openingHours": "Mo-Fr 08:00-19:30",
+    "sameAs": [
+      "https://www.facebook.com/El-Espejo-Espacio-Psicoterap%C3%A9utico-274649443003355/",
+      "https://instagram.com/el.espejo.rio4"
+    ]
+  }
+  </script>
   
   <!-- Google Analictycs--> 
 	
@@ -60,10 +104,63 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link href="css/style.css" rel="stylesheet">
   <!--Favicon-->
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
-  <!-- Google Map -->
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBorpJVk5iOoYZDmRKzIspYZzPS6hqT2sE"></script>
-  <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBorpJVk5iOoYZDmRKzIspYZzPS6hqT2sE" defer></script>-->
-  <script src="plugins/google-map/gmap.js" defer></script>
+
+  <!-- Floating WhatsApp Button + Smooth Scroll -->
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .whatsapp-float .wa-label {
+      background: #fff;
+      color: #128C7E;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .whatsapp-float:hover .wa-label {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .whatsapp-float .wa-icon {
+      background: #25D366;
+      color: #fff;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.45);
+      animation: wa-pulse 2.5s infinite;
+      transition: transform 0.2s;
+    }
+    .whatsapp-float:hover .wa-icon {
+      transform: scale(1.1);
+    }
+    @keyframes wa-pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+      70%  { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+  </style>
+  <!-- Google Map (loaded at bottom of body) -->
 
 	
 </head>
@@ -125,7 +222,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="top-right text-center text-md-right">
           <ul class="social-links">
             <li>
-              <a href="https://www.facebook.com/El-Espejo-Espacio-Psicoterap%C3%A9utico-274649443003355/" target="_blank" aria-label="facebook">
+              <a href="https://www.facebook.com/El-Espejo-Espacio-Psicoterap%C3%A9utico-274649443003355/" target="_blank" rel="noopener noreferrer" aria-label="facebook">
                 <i class="fab fa-facebook-f"></i>
               </a>
             </li>
@@ -140,7 +237,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </a>
             </li>-->
             <li>
-              <a href="https://instagram.com/el.espejo.rio4?igshid=11por4zixnxsk" target="_blank" aria-label="instagram">
+              <a href="https://instagram.com/el.espejo.rio4?igshid=11por4zixnxsk" target="_blank" rel="noopener noreferrer" aria-label="instagram">
                 <i class="fab fa-instagram"></i>
               </a>
             </li>
@@ -344,10 +441,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p>Ponete en contacto con nosotros</p>
       </div>
       <div class="col-lg-4 col-md-6 top-doctor item">
-        <i class="fa fa-stethoscope"></i>
-        <h2 style="font-family: 'Dancing Script', cursive; font-size: 34px">Protocolo Covid</h2>
-        <p>Pensando en cuidarte, manejamos todos los protocolos de distanciamiento e higiene.</p>
-        <a href="service.html" class="btn btn-main" data-toggle="modal" data-target="#exampleModal">Más Info!</a>
+        <i class="fa fa-laptop-medical"></i>
+        <h2 style="font-family: 'Dancing Script', cursive; font-size: 34px">Atención Online</h2>
+        <p>También ofrecemos sesiones por videollamada para mayor comodidad y accesibilidad desde cualquier lugar.</p>
+        <a href="https://wa.me/5493585185508/?text=Hola!%20Me%20interesa%20la%20atenci%C3%B3n%20online." class="btn btn-main" target="_blank" rel="noopener noreferrer">Consultá aquí</a>
       </div>
       <div class="col-lg-4 col-md-12 working-time item">
         <i class="fa fa-clock"></i>
@@ -432,98 +529,98 @@ de la vida cotidiana la misión de nuestra institución. Un espejo es un element
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-01.jpg" class="img-fluid" alt="gallery-image">
+          <img loading="lazy" src="images/gallery/gallery-01.jpg" class="img-fluid" alt="Sala de espera El Espejo">
           <a data-fancybox="images" href="images/gallery/gallery-01.jpg"></a>
-          <h3>Facility 01</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+          <h3>Sala de Espera</h3>
+          <p>Un espacio cómodo y tranquilo donde comenzar tu experiencia.</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-02.jpg" class="img-fluid" alt="gallery-image">
+          <img loading="lazy" src="images/gallery/gallery-02.jpg" class="img-fluid" alt="Recepción El Espejo">
           <a data-fancybox="images" href="images/gallery/gallery-02.jpg"></a>
-          <h3>Facility 02</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+          <h3>Recepción</h3>
+          <p>Te recibimos con calidez desde el primer momento.</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-03.jpg" class="img-fluid" alt="gallery-image">
+          <img loading="lazy" src="images/gallery/gallery-03.jpg" class="img-fluid" alt="Consultorio 1 El Espejo">
           <a data-fancybox="images" href="images/gallery/gallery-03.jpg"></a>
-          <h3>Facility 03</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+          <h3>Consultorio 1</h3>
+          <p>Espacios diseñados para el bienestar y la privacidad.</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-04.jpg" class="img-fluid" alt="gallery-image">
+          <img loading="lazy" src="images/gallery/gallery-04.jpg" class="img-fluid" alt="Consultorio 2 El Espejo">
           <a data-fancybox="images" href="images/gallery/gallery-04.jpg"></a>
-          <h3>Facility 04</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+          <h3>Consultorio 2</h3>
+          <p>Ambientes cálidos y confortables para tu proceso.</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-05.jpg" class="img-fluid" alt="gallery-image">
+          <img loading="lazy" src="images/gallery/gallery-05.jpg" class="img-fluid" alt="Consultorio 3 El Espejo">
           <a data-fancybox="images" href="images/gallery/gallery-05.jpg"></a>
-          <h3>Facility 05</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+          <h3>Consultorio 3</h3>
+          <p>Un lugar pensado para la reflexión y el encuentro.</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-06.jpg" class="img-fluid" alt="gallery-image">
+          <img loading="lazy" src="images/gallery/gallery-06.jpg" class="img-fluid" alt="Sala grupal El Espejo">
           <a data-fancybox="images" href="images/gallery/gallery-06.jpg"></a>
-          <h3>Facility 06</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+          <h3>Sala Grupal</h3>
+          <p>Espacio amplio para talleres y terapias grupales.</p>
         </div>
       </div>
-	<div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-07.jpg" class="img-fluid" alt="gallery-image">
+          <img loading="lazy" src="images/gallery/gallery-07.jpg" class="img-fluid" alt="Consultorio 4 El Espejo">
           <a data-fancybox="images" href="images/gallery/gallery-07.jpg"></a>
-          <h3>Facility 06</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+          <h3>Consultorio 4</h3>
+          <p>Iluminado y acogedor para cada sesión.</p>
         </div>
       </div>
-		<div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-08.jpg" class="img-fluid" alt="gallery-image">
+          <img loading="lazy" src="images/gallery/gallery-08.jpg" class="img-fluid" alt="Consultorio 5 El Espejo">
           <a data-fancybox="images" href="images/gallery/gallery-08.jpg"></a>
-          <h3>Facility 06</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+          <h3>Consultorio 5</h3>
+          <p>Privacidad y confort en cada detalle.</p>
         </div>
       </div>
-		<div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-09.jpg" class="img-fluid" alt="gallery-image">
+          <img loading="lazy" src="images/gallery/gallery-09.jpg" class="img-fluid" alt="Pasillo El Espejo">
           <a data-fancybox="images" href="images/gallery/gallery-09.jpg"></a>
-          <h3>Facility 06</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+          <h3>Pasillo</h3>
+          <p>Espacios de circulación amplios y luminosos.</p>
         </div>
       </div>
-		<div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-10.jpg" class="img-fluid" alt="gallery-image">
+          <img loading="lazy" src="images/gallery/gallery-10.jpg" class="img-fluid" alt="Área común El Espejo">
           <a data-fancybox="images" href="images/gallery/gallery-10.jpg"></a>
-          <h3>Facility 06</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+          <h3>Área Común</h3>
+          <p>Un espacio de encuentro pensado para la comodidad.</p>
         </div>
       </div>
-		<div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-11.jpg" class="img-fluid" alt="gallery-image">
+          <img loading="lazy" src="images/gallery/gallery-11.jpg" class="img-fluid" alt="Exterior El Espejo">
           <a data-fancybox="images" href="images/gallery/gallery-11.jpg"></a>
-          <h3>Facility 06</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+          <h3>Exterior</h3>
+          <p>Fachada del centro, ubicado en el corazón de Río Cuarto.</p>
         </div>
       </div>
-		<div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="gallery-item">
-          <img loading="lazy" src="images/gallery/gallery-12.jpg" class="img-fluid" alt="gallery-image">
+          <img loading="lazy" src="images/gallery/gallery-12.jpg" class="img-fluid" alt="Detalles decorativos El Espejo">
           <a data-fancybox="images" href="images/gallery/gallery-12.jpg"></a>
-          <h3>Facility 06</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+          <h3>Detalles</h3>
+          <p>Cada rincón pensado para transmitir calma y bienestar.</p>
         </div>
       </div>
 		<div class="col-lg-3 col-md-6">
@@ -857,192 +954,168 @@ de la vida cotidiana la misión de nuestra institución. Un espejo es un element
           <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
-                  <img loading="lazy" src="images/gallery/serv1.jpg" alt="images" class="img-fluid">
+                <a href="#sobre_el_epsejo">
+                  <img loading="lazy" src="images/gallery/serv1.jpg" alt="Psicoterapia Individual" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Nuestros Servicios</span>
-                
-                  <h6>Contactanos para  mas info.</h6>
-                
-               <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+                <span>Psicología</span>
+                  <h6>Psicoterapia Individual</h6>
+               <p><a href="https://wa.me/5493585185508/?text=Hola!%20Quiero%20info%20sobre%20Psicoterapia%20Individual." class="btn btn-style-one" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Más Info</a></p>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
-                  <img loading="lazy" src="images/gallery/serv2.jpg" alt="images" class="img-fluid">
+                <a href="#sobre_el_epsejo">
+                  <img loading="lazy" src="images/gallery/serv2.jpg" alt="Terapia de Pareja" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Nuestros Servicios</span>
-                
-                  <h6>Contactanos para  mas info.</h6>
-                
-                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+                <span>Psicología</span>
+                  <h6>Terapia de Pareja</h6>
+                <p><a href="https://wa.me/5493585185508/?text=Hola!%20Quiero%20info%20sobre%20Terapia%20de%20Pareja." class="btn btn-style-one" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Más Info</a></p>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
-                  <img loading="lazy" src="images/gallery/serv3.jpg" alt="images" class="img-fluid">
+                <a href="#sobre_el_epsejo">
+                  <img loading="lazy" src="images/gallery/serv3.jpg" alt="Terapia Familiar" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Nuestros Servicios</span>
-                
-                  <h6>Contactanos para  mas info.</h6>
-                
-                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+                <span>Psicología</span>
+                  <h6>Terapia Familiar</h6>
+                <p><a href="https://wa.me/5493585185508/?text=Hola!%20Quiero%20info%20sobre%20Terapia%20Familiar." class="btn btn-style-one" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Más Info</a></p>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
-                  <img loading="lazy" src="images/gallery/serv4.jpg" alt="images" class="img-fluid">
+                <a href="#sobre_el_epsejo">
+                  <img loading="lazy" src="images/gallery/serv4.jpg" alt="Terapia Gestáltica" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Nuestros Servicios</span>
-                
-                  <h6>Contactanos para  mas info.</h6>
-                
-                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+                <span>Psicología</span>
+                  <h6>Terapia Gestáltica</h6>
+                <p><a href="https://wa.me/5493585185508/?text=Hola!%20Quiero%20info%20sobre%20Terapia%20Guestáltica." class="btn btn-style-one" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Más Info</a></p>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
-                  <img loading="lazy" src="images/gallery/serv5.jpg" alt="images" class="img-fluid">
+                <a href="#sobre_el_epsejo">
+                  <img loading="lazy" src="images/gallery/serv5.jpg" alt="Psicoanálisis" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Nuestros Servicios</span>
-                
-                  <h6>Contactanos para  mas info.</h6>
-                
-                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+                <span>Psicología</span>
+                  <h6>Psicoanálisis</h6>
+                <p><a href="https://wa.me/5493585185508/?text=Hola!%20Quiero%20info%20sobre%20Psicoanálisis." class="btn btn-style-one" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Más Info</a></p>
               </div>
             </div>
           </div>
-			<div class="item">
-            <div class="inner-box">
-              <div class="img_holder">
-                <a href="service.html">
-                  <img loading="lazy" src="images/gallery/serv6.jpg" alt="images" class="img-fluid">
-                </a>
-              </div>
-              <div class="image-content text-center">
-                <span>Nuestros Servicios</span>
-                
-                  <h6>Contactanos para  mas info.</h6>
-                
-                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
-              </div>
-            </div>
-          </div>
-			<div class="item">
-            <div class="inner-box">
-              <div class="img_holder">
-                <a href="service.html">
-                  <img loading="lazy" src="images/gallery/serv7.jpg" alt="images" class="img-fluid">
-                </a>
-              </div>
-              <div class="image-content text-center">
-                <span>Nuestros Servicios</span>
-                
-                  <h6>Contactanos para  mas info.</h6>
-                
-                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
-              </div>
-            </div>
-          </div>
-		  <div class="item">
-            <div class="inner-box">
-              <div class="img_holder">
-                <a href="service.html">
-                  <img loading="lazy" src="images/gallery/serv8.jpg" alt="images" class="img-fluid">
-                </a>
-              </div>
-              <div class="image-content text-center">
-                <span>Nuestros Servicios</span>
-                
-                  <h6>Contactanos para  mas info.</h6>
-                
-                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
-              </div>
-            </div>
-          </div>	
           <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
-                  <img loading="lazy" src="images/gallery/serv9.jpg" alt="images" class="img-fluid">
+                <a href="#sobre_el_epsejo">
+                  <img loading="lazy" src="images/gallery/serv6.jpg" alt="Terapia Grupal" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Nuestros Servicios</span>
-                
-                  <h6>Contactanos para  mas info.</h6>
-                
-                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+                <span>Psicología</span>
+                  <h6>Terapia Grupal</h6>
+                <p><a href="https://wa.me/5493585185508/?text=Hola!%20Quiero%20info%20sobre%20Terapia%20Grupal." class="btn btn-style-one" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Más Info</a></p>
               </div>
             </div>
           </div>
-			<div class="item">
+          <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
-                  <img loading="lazy" src="images/gallery/serv10.jpg" alt="images" class="img-fluid">
+                <a href="#sobre_el_epsejo">
+                  <img loading="lazy" src="images/gallery/serv7.jpg" alt="Psicopedagogía" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Nuestros Servicios</span>
-                
-                  <h6>Contactanos para  mas info.</h6>
-                
-                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+                <span>Psicopedagogía</span>
+                  <h6>Psicopedagogía</h6>
+                <p><a href="https://wa.me/5493585185508/?text=Hola!%20Quiero%20info%20sobre%20Psicopedagogía." class="btn btn-style-one" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Más Info</a></p>
               </div>
             </div>
           </div>
-			<div class="item">
+          <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
-                  <img loading="lazy" src="images/gallery/serv11.jpg" alt="images" class="img-fluid">
+                <a href="#sobre_el_epsejo">
+                  <img loading="lazy" src="images/gallery/serv8.jpg" alt="Evaluación Neurocognitiva" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Nuestros Servicios</span>
-                
-                  <h6>Contactanos para  mas info.</h6>
-                
-                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+                <span>Psicopedagogía</span>
+                  <h6>Evaluación Neurocognitiva</h6>
+                <p><a href="https://wa.me/5493585185508/?text=Hola!%20Quiero%20info%20sobre%20Evaluación%20Neurocognitiva." class="btn btn-style-one" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Más Info</a></p>
               </div>
             </div>
           </div>
-			<div class="item">
+          <div class="item">
             <div class="inner-box">
               <div class="img_holder">
-                <a href="service.html">
-                  <img loading="lazy" src="images/gallery/serv12.jpg" alt="images" class="img-fluid">
+                <a href="#sobre_el_epsejo">
+                  <img loading="lazy" src="images/gallery/serv9.jpg" alt="Atención a Adolescentes" class="img-fluid">
                 </a>
               </div>
               <div class="image-content text-center">
-                <span>Nuestros Servicios</span>
-                
-                  <h6>Contactanos para  mas info.</h6>
-                
-                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+                <span>Psicología</span>
+                  <h6>Atención a Adolescentes</h6>
+                <p><a href="https://wa.me/5493585185508/?text=Hola!%20Quiero%20info%20sobre%20atención%20a%20adolescentes." class="btn btn-style-one" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="#sobre_el_epsejo">
+                  <img loading="lazy" src="images/gallery/serv10.jpg" alt="Atención a Niños" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Psicología</span>
+                  <h6>Atención a Niños</h6>
+                <p><a href="https://wa.me/5493585185508/?text=Hola!%20Quiero%20info%20sobre%20atención%20a%20niños." class="btn btn-style-one" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="#sobre_el_epsejo">
+                  <img loading="lazy" src="images/gallery/serv11.jpg" alt="Terapia Floral" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Terapia Floral</span>
+                  <h6>Flores de Bach</h6>
+                <p><a href="https://wa.me/5493585185508/?text=Hola!%20Quiero%20info%20sobre%20Terapia%20Floral." class="btn btn-style-one" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="#sobre_el_epsejo">
+                  <img loading="lazy" src="images/gallery/serv12.jpg" alt="Atención Online" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Online</span>
+                  <h6>Atención Online</h6>
+                <p><a href="https://wa.me/5493585185508/?text=Hola!%20Quiero%20info%20sobre%20atención%20online." class="btn btn-style-one" target="_blank" rel="noopener noreferrer"><i class="fas fa-phone"></i> Más Info</a></p>
               </div>
             </div>
           </div>
@@ -1539,6 +1612,16 @@ La terapia de pareja es un espacio de encuentro de dos personas,  el cual puede 
 </div>
 <!--End pagewrapper-->
 
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/5493585185508/?text=Hola!%20Me%20contacto%20desde%20la%20web." 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   aria-label="Contactar por WhatsApp">
+  <span class="wa-label">¡Escribinos!</span>
+  <span class="wa-icon"><i class="fab fa-whatsapp"></i></span>
+</a>
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target=".header-top">
