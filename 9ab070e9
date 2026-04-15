@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+
+  <!-- ** Basic Page Needs ** -->
+  <meta charset="utf-8">
+  <title>El Espejo | Espacio Psicoterapéutico</title>
+  <!-- Css fuentes -->
+  <link rel="stylesheet" href="css/fonts.css" >
+  <!-- ** Mobile Specific Metas ** -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="EL Espejo - Espacio Psicoterapéutico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Dynamo Studios">
+  
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- Slick Carousel -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+  <!-- FancyBox -->
+  <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+  <!-- animate.css -->
+  <link rel="stylesheet" href="plugins/animation/animate.min.css">
+  <!-- jquery-ui -->
+  <link rel="stylesheet" href="plugins/jquery-ui/jquery-ui.css">
+  <!-- timePicker -->
+  <link rel="stylesheet" href="plugins/timePicker/timePicker.css">
+  <!-- Google Fonts--> 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">	
+  <!-- Stylesheets -->
+  <link href="css/style.css" rel="stylesheet">
+  <!--Favicon-->
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <!-- Google Map -->
+  <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyBorpJVk5iOoYZDmRKzIspYZzPS6hqT2sE"></script>
+  <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBorpJVk5iOoYZDmRKzIspYZzPS6hqT2sE" defer></script>-->
+  <script src="plugins/google-map/gmap.js" defer></script>
+
+	
+</head>
+
+
+<body>
+	
+	<!-- MODAL COVID-->
+	
+<script>
+	$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+	
+</script>	
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel" style="color: black">Protocolo Covid</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="img-fluid" src="images/background/protocolo_covid.jpg">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-style-one" data-dismiss="modal">Cerrar</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	<!-- Fin MODAL-->
+	
+  <div class="page-wrapper">
+
+  
+
+<!--header top-->
+<div class="header-top">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-12 col-md-6" >
+        <div class="top-left text-center text-md-left">
+          <h6 style="text-align: center">Horario: <strong> Lunes a Viernes, de 8  a 19</strong></h6>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="top-right text-center text-md-right">
+          <ul class="social-links">
+            <li>
+              <a href="https://www.facebook.com/El-Espejo-Espacio-Psicoterap%C3%A9utico-274649443003355/" target="_blank" aria-label="facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <!--<li>
+              <a href="https://themefisher.com/" aria-label="twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>-->
+            <!--<li>
+              <a href="https://themefisher.com/" aria-label="google-plus">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>-->
+            <li>
+              <a href="https://instagram.com/el.espejo.rio4?igshid=11por4zixnxsk" target="_blank" aria-label="instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <!--<li>
+              <a href="https://themefisher.com/" aria-label="pinterest">
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--header top-->
+
+<!--Header Upper-->
+<section class="header-uper">
+  <div class="container col-xl-12 row justify-content-center">
+    <div class="row align-items-center">
+      <div class="col-xl-12 col-lg-3">
+        <!--<div class="logo">
+          <a href="index.html">
+            <img loading="lazy" class="img-fluid" src="images/logo/EL_ESPEJO_ISOLOGO_H_320px.png" alt="logo">
+          </a>
+        </div>-->
+      </div>
+      <div class="col-xl-12 col-lg-9">
+        <div class="right-side">
+          <ul class="contact-info pl-0 mb-4 mb-md-0" style="margin-top: 10px; margin-bottom: 10px;">
+			  <li class="item text-left logo">
+				  <img loading="lazy" class="img-fluid" src="images/logo/EL_ESPEJO_ISOLOGO_H_320px.png" style="margin-top: -30px" alt="logo">
+			  </li>
+            <li class="item text-left">
+              <div class="icon-box">
+                <i class="far fa-envelope"></i>
+              </div>
+              <strong>Mail</strong>
+              <br>
+              <a href="mailto:info@centroelespejo.com.ar">
+                <span>info@centroelespejo.com.ar</span>
+              </a>
+            </li>
+            <li class="item text-left">
+              <div class="icon-box">
+                <i class="fas fa-phone"></i>
+              </div>
+              <strong>Telefono</strong>
+              <br>
+				<span><a href="tel:+543585185508">(3585) 185508</a></span>
+            </li>
+			<li class="item text-left">
+              <div class="icon-box">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <strong>Escribinos</strong>
+              <br>
+              
+	      <span><a href="https://wa.me/5493585185508/">Contacto directo!</a> </span>
+</li> 
+			  <!--<li class="item text-left">
+			  <div class="link-btn text-center text-lg-right">
+            <a href="#sobre_el_epsejo" class="btn-style-one">Conocenos</a>
+          </div>
+			  </li>-->
+          </ul>
+          <!--<div class="link-btn text-center text-lg-right">
+            <a href="#sobre_el_epsejo" class="btn-style-one">Conocenos</a>
+          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Header Upper-->
+
+
+<!--Main Header-->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container" id="Home">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarLinks">
+      <ul class="navbar-nav" id="nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#Home">Home</a>
+        </li>
+        <li class="nav-item @@about">
+          <a class="nav-link" href="#sobre_el_epsejo">El Espejo</a>
+        </li>
+        <li class="nav-item @@gallery">
+          <a class="nav-link" href="#galeria">Galeria</a>
+        </li>
+        <li class="nav-item @@service">
+          <a class="nav-link" href="#caracteristicas">Metodologías</a>
+        </li>
+
+		<li class="nav-item @@appointment">
+          <a class="nav-link" href="#servicios">Servicios</a>
+        </li>  
+        <li class="nav-item @@team">
+          <a class="nav-link" href="#equipo">Nuestros Equipo</a>
+        </li>
+        <li class="nav-item @@appointment">
+          <a class="nav-link" href="#faq">Información</a>
+        </li>  
+        <!--<li class="nav-item dropdown @@blogs">
+          <a class="nav-link dropdown-toggle" href="#Blog" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blogs</a>
+
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item @@blog" href="blog.html">Blog</a></li>
+            <li><a class="dropdown-item @@blogDetails" href="blog-details.html">Blog Details</a></li>
+            <li class="dropdown dropdown-submenu dropright">
+              <a class="dropdown-item dropdown-toggle" href="#!" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
+    
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="index.html">Submenu 01</a></li>
+                <li><a class="dropdown-item" href="index.html">Submenu 02</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>-->
+        <li class="nav-item @@contact">
+          <a class="nav-link" href="#contact">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--End Main Header -->
+
+<!--=================================
+=            Page Slider            =
+==================================-->
+<div class="hero-slider">
+  <!-- Slider Item -->
+  <div class="slider-item slide1" style="background-image:url(images/slider/slider-bg-1.jpg)">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- Slide Content Start -->
+          <div class="content style text-center">
+            <h2 class="text-white text-bold mb-2" data-animation-in="slideInLeft">Espacios cómodos</h2>
+            <p class="tag-text mb-4" data-animation-in="slideInRight">Espacios pensados para tu comodidad  <br> Consultorios de primer nivel</p>
+            <a href="#galeria" class="btn-style-one" data-animation-in="slideInLeft" data-duration-in="1.2">Conocé más</a>
+          </div>
+          <!-- Slide Content End -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Slider Item -->
+  <div class="slider-item" style="background-image:url(images/slider/slider-bg-2.jpg);">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- Slide Content Start-->
+          <div class="content style text-center">
+            <h2 class="text-white" data-animation-in="slideInRight">El Espejo - Espacio Psicoterapéutico</h2>
+            <p class="tag-text mb-4" data-animation-in="slideInRight" data-duration-in="0.6">Conocenos! </p>
+            <a href="#galeria" class="btn-style-one" data-animation-in="slideInRight" data-duration-in="1.2">Conocé más</a>
+          </div>
+          <!-- Slide Content End-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Slider Item -->
+  <div class="slider-item" style="background-image:url(images/slider/slider-bg-3.jpg)">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- Slide Content Start -->
+          <div class="content text-center style">
+            <h2 class="text-white text-bold mb-2" data-animation-in="slideInRight">Rediseño Integral!</h2>
+            <p class="tag-text mb-4" data-animation-in="slideInLeft">Rediseñamos todo nuestro centro <br>pensando en nuestro pacientes</p>
+            <a href="#galeria" class="btn-style-one" data-animation-in="slideInRight"  data-duration-in="1.2">Conocé más</a>
+          </div>
+          <!-- Slide Content End -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--====  End of Page Slider  ====-->
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-block row no-gutters">
+      <div class="col-lg-4 col-md-6 emmergency item">
+        <i class="fa fa-phone"></i>
+        <h2 style="font-family:'Goldie'; font-size: 34px">Contacto Directo</h2>
+        <a href="https://wa.me/5493585185508/">358-5185508</a>
+        <p>Ponete en contacto con nosotros</p>
+      </div>
+      <div class="col-lg-4 col-md-6 top-doctor item">
+        <i class="fa fa-stethoscope"></i>
+        <h2 style="font-family:'Goldie'; font-size: 34px">Protocolo Covid</h2>
+        <p>Pensando en cuidarte, manejamos todos los protocolos de distanciamiento e higiene.</p>
+        <a href="service.html" class="btn btn-main" data-toggle="modal" data-target="#exampleModal">Más Info!</a>
+      </div>
+      <div class="col-lg-4 col-md-12 working-time item">
+        <i class="fa fa-clock"></i>
+        <h2 style="font-family:'Goldie'; font-size: 34px">Horarios de Atencion</h2>
+        <ul class="w-hours">
+          <li>Lun a Vier - <span>8:00 - 19:30</span></li>
+          <li>Lun a Vier - <span>8:00 - 19:30</span></li>
+          <li>Lun a Vier - <span>8:00 - 19:30</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Page Title-->
+<section class="page-title text-center" style="background-image:url(images/background/4.jpg);">
+    <div class="container" id="sobre_el_epsejo">
+        <div class="title-text">
+            <h1>Sobre El Espejo</h1>
+            <ul class="title-menu clearfix">
+                <li>
+                    <a href="index.html">home &nbsp;/</a>
+                </li>
+                <li>about us</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+<!-- Our Story -->
+<section class="story">
+  <div class="container col-lg-12">
+    <div class="row">
+      <div class="col-lg-5">
+        <img loading="lazy" src="images/slider/interior/interior4_2.jpg" class="responsive" alt="story">
+      </div>
+      <div class="col-lg-7">
+        <div class="story-content">
+          <h1 >El Espejo</h1>
+          
+            <h6>Mision</h6>
+            <p>El nombre El espejo surgió en la inspiración de simbolizar en un objeto
+de la vida cotidiana la misión de nuestra institución. Un espejo es un elemento que refleja la realidad de un objeto, sin Juzgar y sin criticar. Es lo que es. En este sentido la misión que como profesionales de la salud mental tomamos es la de acompañar a los pacientes que a nosotros acuden a que tomen contacto con su verdadero ser, lo cual implica el acompañamiento amoroso en el camino de tomar una imagen realista de si mismo, para poder actualizarse en sus necesidades, roles, recursos, motivaciones y potencialidades. En este sentido podemos decir que acompañamos a las personas que acuden a nuestra institución al contacto consigo mismo y con el medio ambiente que las rodea. Entendemos por contacto a la integración de aspectos de la personalidad no vistos, muchas veces no queridos pero tan necesarios para una vida consiente. No solo desde el centro se busca el abordaje de los síntomas si no también se facilita la experiencia en todo su potencial. 
+?</p>
+            <h6 style="font-family:'Goldie'; font-size: 24px">Vision</h6>
+            <p>Se ve al Espejo como una fuerza viva, en constante movimiento. Se rigue para su misión por los estándares de formación académica continua de sus integrantes, supervisión de practicas profesionales,  compromiso grupal para su funcionamiento y respeto absoluto por la persona que acude a nuestro centro, considerando sus derechos y teniendo la dignidad de la persona humana como pilar fundamental.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Promo Video -->
+<section class="promo-video">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="block text-center">
+          <h6>Recorrido Virtual</h6>
+          <h1>Sobre nuestro Centro
+          </h1>
+          <a data-fancybox
+            href="https://www.youtube.com/watch?v=hWDxOKAkxOY;autoplay=1&amp;rel=0&amp;controls=0&amp;showinfo=0"><i class="fas fa-play"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery bg-gray">
+  <div class="container" id="galeria">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title text-center">
+          <h3>Algunas imagenes 
+            <span>de nuestro centro</span>
+          </h3>
+          <p>Te mostramos El Espejo
+            <br>Un lugar pensado para la comodidad de nuestros pacientes...</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery-01.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery-01.jpg"></a>
+          <h3>Facility 01</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery-02.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery-02.jpg"></a>
+          <h3>Facility 02</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery-03.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery-03.jpg"></a>
+          <h3>Facility 03</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery-04.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery-04.jpg"></a>
+          <h3>Facility 04</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery-05.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery-05.jpg"></a>
+          <h3>Facility 05</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery-06.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery-06.jpg"></a>
+          <h3>Facility 06</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+	<div class="col-lg-3 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery-07.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery-07.jpg"></a>
+          <h3>Facility 06</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+		<div class="col-lg-3 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery-08.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery-08.jpg"></a>
+          <h3>Facility 06</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+		<div class="col-lg-3 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery-09.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery-09.jpg"></a>
+          <h3>Facility 06</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+		<div class="col-lg-3 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery-10.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery-10.jpg"></a>
+          <h3>Facility 06</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+		<div class="col-lg-3 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery-11.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery-11.jpg"></a>
+          <h3>Facility 06</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+		<div class="col-lg-3 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery-12.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery-12.jpg"></a>
+          <h3>Facility 06</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+		
+    </div>
+  </div>
+</section>	  
+	  
+<!--about section-->
+<section class="feature-section section bg-gray" >
+	<div class="container" id="caracteristicas">
+		<div class="row">
+			<div class="col-lg-12">
+				<div id="features" class="image-content">
+					<div class="section-title text-center">
+						<h3>Algunas Caracterisiticas que<span> nos hacen unicos</span></h3>
+						<p class="mb-0">Estas son solo algunas caraterísitcas de nuestro centro <br> Siempre haciendo foco en nuestros pacientes</p>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="item">
+								<div class="icon-box">
+									<figure>
+										<a href="services.html"><img loading="lazy" src="images/resource/1.png" alt="features image"></a>
+									</figure>
+								</div>
+								<h3 class="mb-2">Formación Continua</h3>
+								<p>Los profesionales que integran el Espejo reciben formación continua en las distintas practicas profesionales.</p>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="item">
+								<div class="icon-box">
+									<figure>
+										<a href="services.html">
+											<img loading="lazy" src="images/resource/2.png" alt="features image">
+										</a>
+									</figure>
+								</div>
+								<h3 class="mb-2">Atención centrada en la persona  con abordaje humanista</h3>
+								<p>Se mantiene una actitud empática hacia la persona y su experiencia subjetiva. Trabajamos de manera activa y colaborativa con la misma para ayudarle a ganar conciencia sobre si misma.</p>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="item">
+								<div class="icon-box">
+									<figure>
+										<a href="services.html">
+											<img loading="lazy" src="images/resource/3.png" alt="features image">
+										</a>
+									</figure>
+								</div>
+								<h3 class="mb-2">Respeto</h3>
+								<p>Estamos regidos por los distintos Códigos de Ética de salud Mental tanto nacionales como internacionales que mandan a respetar a la persona humana en su totalidad.</p>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<!--<div class="item">
+								<div class="icon-box">
+									<figure>
+										<a href="services.html">
+											<img loading="lazy" src="images/resource/4.png" alt="features image">
+										</a>
+									</figure>
+								</div>
+								<h3 class="mb-2">General Treatment</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur
+									ex sunt, est aspernatur
+									at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?</p>
+							</div>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--End about section-->
+
+<!--Start about us area-->
+<section class="service-tab-section section">
+  <div class="outer-box clearfix">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Nav tabs -->
+          <div class="tabs mb-5">
+            <ul class="nav nav-tabs justify-content-center" id="aboutTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="dormitory-tab" data-toggle="tab" href="#dormitory" role="tab" aria-controls="dormitory" aria-selected="true">Psicología</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="orthopedic-tab" data-toggle="tab" href="#orthopedic" role="tab" aria-controls="orthopedic" aria-selected="false">Psicopedagogía</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="sonogram-tab" data-toggle="tab" href="#sonogram" role="tab" aria-controls="sonogram" aria-selected="false">Terapia Floral</a>
+              </li>
+              <!--<li class="nav-item" role="presentation">
+                <a class="nav-link" id="x-ray-tab" data-toggle="tab" href="#x-ray" role="tab" aria-controls="x-ray" aria-selected="false">x-ray</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                <a class="nav-link" id="diagnostic-tab" data-toggle="tab" href="#diagnostic" role="tab" aria-controls="diagnostic" aria-selected="false">diagnostic</a>
+              </li>-->
+            </ul>
+          </div>
+          <!--Start single tab content-->
+          <div class="tab-content" id="aboutTab">
+            <div class="service-box tab-pane fade show active" id="dormitory">
+              <div class="row">
+                <div class="col-lg-6">
+                  <img loading="lazy" class="img-fluid" src="images/services/psicologia.png" alt="service-image">
+                </div>
+                <div class="col-lg-6">
+                  <div class="contents">
+                    <div class="section-title">
+                      <h3>Psicologia</h3>
+                    </div>
+                    <div class="text">
+                      <p>En el área de Psicología los profesionales están formados y certificados en Terapia Guestalt y psicoanálisis. </p>
+                    </div>
+                    <!--<ul class="content-list">
+                      <li>
+                        <i class="far fa-dot-circle"></i>Whitening is among the most popular dental
+                      </li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                    </ul>-->
+                    <a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End single tab content-->
+            <!--Start single tab content-->
+            <div class="service-box tab-pane fade" id="orthopedic">
+              <div class="row">
+                <div class="col-lg-6">
+                  <img loading="lazy" class="img-fluid" src="images/services/psicopedagogia.png" alt="service-image">
+                </div>
+                <div class="col-lg-6">
+                  <div class="contents">
+                    <div class="section-title">
+                      <h3>Psicopedagogia</h3>
+                    </div>
+                    <div class="text">
+                      <p>Trabajamos con las personas en SITUACIÓN DE APRENDIZAJE. Generalmente, nuestra intervención es demandada frente al alumno que tiene dificultades de aprendizaje.
+</p>
+                    </div>
+                    <ul class="content-list">
+                      <li>
+                        <i class="far fa-dot-circle"></i>Evaluación neurocognitiva y diagnóstico de dificultades de aprendizaje.
+                      </li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Asesoramiento a familia y docentes</li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Apoyo a la integración escolar</li>
+					  <li>
+                        <i class="far fa-dot-circle"></i>Tratamiento de estimulación cognitiva.</li>
+					<li>
+                        <i class="far fa-dot-circle"></i>Evaluación neurocognitiva y diagnóstico</li>
+						<li>
+                        <i class="far fa-dot-circle"></i>Tratamiento de estimulación cognitiva.</li>
+						<li>
+                        <i class="far fa-dot-circle"></i>Talleres grupales destinados a potenciar el aprendizaje y pensamiento crítico</li>
+                    </ul>
+                   <a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End single tab content-->
+            <!--Start single tab content-->
+            <div class="service-box tab-pane fade" id="sonogram">
+              <div class="row">
+                <div class="col-lg-6">
+                  <img loading="lazy" class="img-fluid" src="images/services/terapia_flroal.jpg" alt="service-image">
+                </div>
+                <div class="col-lg-6">
+                  <div class="contents">
+                    <div class="section-title">
+                      <h3>Terapia Floral</h3>
+                    </div>
+                    <div class="text">
+                      <p>Que son las Flores de Bach? El Dr. Bach descubrió que en cada flor habita un patrón vibratorio coincidente a un estado emocional y mental específico.</p><p>Como funcionan? Actúan tratando al individuo, no la enfermedad ni los síntomas, aliviando el sufrimiento y la condición emocional.</p>
+                    </div>
+                    <!--<ul class="content-list">
+                      <li>
+                        <i class="far fa-dot-circle"></i>Whitening is among the most popular dental
+                      </li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                    </ul>-->
+                   <a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End single tab content-->
+            <!--Start single tab content-->
+            <div class="service-box tab-pane fade" id="x-ray">
+              <div class="row">
+                <div class="col-lg-6">
+                  <img loading="lazy" class="img-fluid" src="images/services/service-four.jpg" alt="service-image">
+                </div>
+                <div class="col-lg-6">
+                  <div class="contents">
+                    <div class="section-title">
+                      <h3>x-ray</h3>
+                    </div>
+                    <div class="text">
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added.
+                        then a dental prosthetic is added.then a dental pros- thetic is added.</p>
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added.
+                        then a dental prosthetic is added.then a dental pros- thetic is added.</p>
+                    </div>
+                    <ul class="content-list">
+                      <li>
+                        <i class="far fa-dot-circle"></i>Whitening is among the most popular dental
+                      </li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                    </ul>
+                    <a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End single tab content-->
+            <!--Start single tab content-->
+            <div class="service-box tab-pane fade" id="diagnostic">
+              <div class="row">
+                <div class="col-lg-6">
+                  <img loading="lazy" class="img-fluid" src="images/services/service-five.jpg" alt="service-image">
+                </div>
+                <div class="col-lg-6">
+                  <div class="contents">
+                    <div class="section-title">
+                      <h3>diagnostic</h3>
+                    </div>
+                    <div class="text">
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added.
+                        then a dental prosthetic is added.then a dental pros- thetic is added.</p>
+                      <p>The implant fixture is first placed, so that it ilikely to osseointegrate,
+                        then a dental prosthetic is added.
+                        then a dental prosthetic is added.then a dental pros- thetic is added.</p>
+                    </div>
+                    <ul class="content-list">
+                      <li>
+                        <i class="far fa-dot-circle"></i>Whitening is among the most popular dental
+                      </li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                      <li>
+                        <i class="far fa-dot-circle"></i>Teeth cleaning is part of oral hygiene and
+                        involves</li>
+                    </ul>
+                    <a href="https://wa.me/5493585185508/" class="btn btn-style-one">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End single tab content-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End about us area-->
+
+<!--Service Section-->
+<section class="service-section bg-gray section">
+  <div class="container"  id="servicios">
+    <div class="section-title text-center">
+      <h3>Algunos de nuestros
+        <span>Servicios</span>
+      </h3>
+      <p>Estos son los servicios que ofrecemos<br>
+        Una lista de todas nuestras especialidads. Contactanos para conocer más y la disponibilidad para concretar una cita!</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="items-container">
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="images/gallery/serv1.jpg" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Nuestros Servicios</span>
+                
+                  <h6>Contactanos para  mas info.</h6>
+                
+               <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="images/gallery/serv2.jpg" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Nuestros Servicios</span>
+                
+                  <h6>Contactanos para  mas info.</h6>
+                
+                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="images/gallery/serv3.jpg" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Nuestros Servicios</span>
+                
+                  <h6>Contactanos para  mas info.</h6>
+                
+                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="images/gallery/serv4.jpg" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Nuestros Servicios</span>
+                
+                  <h6>Contactanos para  mas info.</h6>
+                
+                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="images/gallery/serv5.jpg" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Nuestros Servicios</span>
+                
+                  <h6>Contactanos para  mas info.</h6>
+                
+                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+			<div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="images/gallery/serv6.jpg" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Nuestros Servicios</span>
+                
+                  <h6>Contactanos para  mas info.</h6>
+                
+                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+			<div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="images/gallery/serv7.jpg" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Nuestros Servicios</span>
+                
+                  <h6>Contactanos para  mas info.</h6>
+                
+                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+		  <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="images/gallery/serv8.jpg" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Nuestros Servicios</span>
+                
+                  <h6>Contactanos para  mas info.</h6>
+                
+                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>	
+          <div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="images/gallery/serv9.jpg" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Nuestros Servicios</span>
+                
+                  <h6>Contactanos para  mas info.</h6>
+                
+                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+			<div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="images/gallery/serv10.jpg" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Nuestros Servicios</span>
+                
+                  <h6>Contactanos para  mas info.</h6>
+                
+                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+			<div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="images/gallery/serv11.jpg" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Nuestros Servicios</span>
+                
+                  <h6>Contactanos para  mas info.</h6>
+                
+                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+			<div class="item">
+            <div class="inner-box">
+              <div class="img_holder">
+                <a href="service.html">
+                  <img loading="lazy" src="images/gallery/serv12.jpg" alt="images" class="img-fluid">
+                </a>
+              </div>
+              <div class="image-content text-center">
+                <span>Nuestros Servicios</span>
+                
+                  <h6>Contactanos para  mas info.</h6>
+                
+                <p><a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Service Section-->
+
+<!--team section-->
+<section class="team-section section">
+  <div class="container" id="equipo">
+    <div class="section-title text-center">
+      <h3>Nuestro equipo de 
+        <span>Profesionales</span>
+      </h3>
+      <p class="mb-0">Estos son los profesionales que día a día hacen del espejo un espacio serio, profesional y de alto nivel.
+        <!--<br>natus nobis deleniti doloremque minima odit voluptatibus ipsam animi?--></p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6">
+        <div class="team-member">
+          <img loading="lazy" src="images/team/team_agos.jpg" alt="doctor" class="img-fluid">
+          <div class="contents text-center">
+            <h4> Agostina Mola -  MP: 12303</h4>
+            <p>Licenciada en Psicología. Psicoterapia psicoanalítica. Adolescentes y Adultos.Atención por obras sociales y particulares.</p>
+            <a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a>
+          </div>
+        </div>
+      </div>
+		<div class="col-lg-4 col-md-6">
+        <div class="team-member">
+          <img loading="lazy" src="images/team/team_vero.jpg" alt="doctor" class="img-fluid">
+          <div class="contents text-center">
+            <h4>Veronica Cantero Petryna - MP: 8820.</h4>
+            <p>Psicoterapeuta Guestaltica. Atención parejas y adultos. Codirectora del Espacio psicoterapeutico El Espejo..</p>
+            <a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="team-member">
+          <img loading="lazy" src="images/team/team_caro.jpg" alt="doctor" class="img-fluid">
+          <div class="contents text-center">
+            <h4>Carolina Pirsch - M.P. 8288.</h4>
+            <p>Licenciada en Psicología.Psicoterapeuta Gestaltica.Psicoterapia Individual, grupal y de pareja. Co - Directora de El Espejo. Atención a Adultos (18+)</p>
+            <a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="team-member">
+          <img loading="lazy" src="images/team/team_victor.jpg" alt="doctor" class="img-fluid">
+          <div class="contents text-center">
+            <h4>Victor Hugo Reinoso - M.P. 8233.</h4>
+            <p>Licenciado en Psicología. Psicólogo Clínico, orientación en Psicoterapia Psicoanalítica.</p>
+            <a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a>
+          </div>
+        </div>
+      </div>
+		<div class="col-lg-4 col-md-6">
+        <div class="team-member">
+          <img loading="lazy" src="images/team/team_ceci.jpg" alt="doctor" class="img-fluid">
+          <div class="contents text-center">
+            <h4>Cecilia Azocar - M.P. 5880</h4>
+            <p>Licenciada en Psicología. Psicoterapeuta Gestaltica. Psicoterapia Individual, grupal y de pareja. Atención a Jóvenes y Adultos</p>
+            <a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a>
+          </div>
+        </div>
+      </div>
+		<div class="col-lg-4 col-md-6">
+        <div class="team-member">
+          <img loading="lazy" src="images/team/team_julia.jpg" alt="doctor" class="img-fluid">
+          <div class="contents text-center">
+            <h4>Julia Aizcorbe - MP. 223148</h4>
+            <p> Lic en psicopedagogía y docente integradora. Valoración  neurocognitiva de niños y adultos. Tratamiento en niños.</p>
+            <a href="https://wa.me/5493585185508/" class="btn btn-style-one"><i class="fas fa-phone"></i> Más Info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End team section-->
+
+<!--testimonial-section-->
+<!--<section class="testimonial-section" style="background: url(images/testimonials/El Espejo 13.jpeg);">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title text-center">
+          <h3>¿Que dicen de nosotros
+            <span>nuestros pacientes?</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="testimonial-carousel">
+          <!--Slide Item-->
+          <!--<div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy" src="images/testimonials/1.png" alt="">
+                </figure>
+              </div>
+              <h6>Adam Rose</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <!--<div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy" src="images/testimonials/2.png" alt="">
+                </figure>
+              </div>
+              <h6>David Warner</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <!--<div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy" src="images/testimonials/3.png" alt="">
+                </figure>
+              </div>
+              <h6>Amy Adams</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <!--<div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy" src="images/testimonials/1.png" alt="">
+                </figure>
+              </div>
+              <h6>Adam Rose</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <!--<div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy" src="images/testimonials/2.png" alt="">
+                </figure>
+              </div>
+              <h6>David Warner</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <!--<div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy" src="images/testimonials/3.png" alt="">
+                </figure>
+              </div>
+              <h6>Amy Adams</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+         <!-- <div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy" src="images/testimonials/1.png" alt="">
+                </figure>
+              </div>
+              <h6>Adam Rose</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+          <!--<div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy" src="images/testimonials/2.png" alt="">
+                </figure>
+              </div>
+              <h6>David Warner</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+          <!--Slide Item-->
+         <!-- <div class="slide-item">
+            <div class="inner-box text-center">
+              <div class="image-box">
+                <figure>
+                  <img loading="lazy" src="images/testimonials/3.png" alt="">
+                </figure>
+              </div>
+              <h6>Amy Adams</h6>
+              <p class="mb-0">Neque porro quisquam est, qui dolorem ipsum quia consectetur, dolor sit amet, consectetur, numquam Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Molestias, at?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End testimonial-section-->
+
+<!-- Contact Section -->
+<section class="appoinment-section section">
+  <div class="container" id="faq">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="accordion-section">
+  <div class="section-title">
+    <h3>Preguntas Frecuentes</h3>
+  </div>
+  <div class="accordion-holder">
+    <div class="accordion" id="accordionGroup" role="tablist" aria-multiselectable="true">
+      <div class="card">
+        <div class="card-header" role="tab" id="headingOne">
+          <h4 class="card-title">
+            <a role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              ¿Quien puede ir a terapia??
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordionGroup">
+          <div class="card-body">
+            
+A psicoterapia  puede ir cualquier persona que perciba un malestar en su existencia y tenga la disponibilidad para abordarlo terapéuticamente, y también todas aquellas personas que sin identificar una dificultad tengan intención de conocerse y explorarse más en profundidad.
+
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingTwo">
+          <h4 class="card-title">
+            <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              ¿Cuando está indicada la terapia de pareja??
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordionGroup">
+          <div class="card-body">
+           
+La terapia de pareja es un espacio de encuentro de dos personas,  el cual puede usarse como un momento para abordar aspectos cotidianos compartidos, aprender distintas estrategias de resolución de conflictos frente a una crisis o dificultades de la vida cotidiana.
+
+          </div>
+        </div>
+      </div>
+      <div class="card col-lg-12">
+        <div class="card-header" role="tab" id="headingThree">
+          <h4 class="card-title">
+            <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+             ¿Cuando tiene que ir un niño/a adolescente a terapia?
+            </a>
+          </h4>
+        </div>
+        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordionGroup">
+          <div class="card-body">
+            Un niño/a o adolescente tiene que ir a terapia cuando las dificultades de su vida cotidiana no pueden ser abordadas con las herramientas actuales, también cuando atraviesa una situación traumática o alguna otra situación que lo desborde en el monto de angustia y necesite acompañamiento.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+     <!-- <div class="col-lg-6">
+        <div class="contact-area pl-0 pl-lg-5">
+  <div class="section-title">
+    <h3>Request
+      <span>Appointment</span>
+    </h3>
+  </div>
+  <form name="contact_form" class="default-form contact-form" action="!#" method="post">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <input class="form-control" type="text" name="Name" placeholder="Name" required="">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="email" name="Email" placeholder="Email" required="">
+        </div>
+        <div class="form-group">
+          <select class="form-control" name="subject">
+            <option>Departments</option>
+            <option>Diagnostic</option>
+            <option>Psychological</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input class="form-control" type="text" name="Phone" placeholder="Phone" required="">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" name="Date" placeholder="Date" required="" id="datepicker" autocomplete="off">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+        </div>
+        <div class="form-group">
+          <select class="form-control" name="subject">
+            <option>Doctor</option>
+            <option>Diagnostic</option>
+            <option>Psychological</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <textarea class="form-control" name="form_message" placeholder="Your Message" required=""></textarea>
+        </div>
+        <div class="form-group text-center">
+          <button type="submit" class="btn-style-one">submit now</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+      </div>-->
+    </div>                    
+  </div>
+</section>
+<!-- End Contact Section -->
+	  
+	  <!--Page Title-->
+<section class="page-title text-center" style="background-image:url(images/background/3.jpg);" id="contact">
+    <div class="container">
+        <div class="title-text">
+            <h1>Contacto</h1>
+            <ul class="title-menu clearfix">
+                <li>
+                    <a href="index.html">Inicio &nbsp;/</a>
+                </li>
+                <li>Contacto</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+
+
+<section class="map">
+  <!-- Google Map -->
+  <div id="map"></div>
+</section>
+<!--====  End of Google Map  ====-->
+
+<!--footer-main-->
+	  
+	  
+<footer class="footer-main">
+						<div class="container-fluid">
+  
+                 <div style="float: left"><img loading="lazy" class="img-fluid" style="max-width:210px; margin-bottom: 20px" src="images/logo/EL_ESPEJO_ISOLOGO2-02-trans-vertical.png" alt="el espejo"></div> 
+  						
+						
+  <div class="footer-top" >
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <div class="about-widget">
+            <ul class="location-link">
+              <!--<li class="item"><i class="far fa-map-pin" aria-hidden="true"></i>
+			<div class="media-body">
+				
+              <h3 style="color: whitesmoke"><i class="far fa-map-pin" aria-hidden="true"></i>Ubicacion</h3>
+              <p>9 de Julio 202, Río Cuarto, Córdoba, Argentina</p>
+            </div>-->
+               
+              <li class="item">
+				  <div class="media-body">
+              <h3 style="color: whitesmoke">Email</h3>
+              
+            </div>
+				  
+                <i class="far fa-envelope" aria-hidden="true"></i>
+                <a href="mailto:contacto@centroelespejo.com.ar">
+                  <p>contacto@centroelespejo.com.ar</p>
+                </a>
+              </li>
+              <li class="item">
+				  
+				  <div class="media-body">
+              <h3 style="color: whitesmoke">Telefono</h3>
+             
+            </div>
+				  
+				  
+                <i class="fas fa-phone" aria-hidden="true"></i>
+				  <p >(3585) 185508</p>
+              </li>
+				
+				<li class="item">
+				  
+				  <div class="media-body">
+              <h3 style="color: whitesmoke">Ubicacion</h3>
+             
+            </div>
+				  
+				  
+                <i class="fas fa-map-pin" aria-hidden="true"></i>
+				  <p >9 de Julio 202, Río Cuarto, Córdoba, Argentina</p>
+              </li>
+          </ul>
+            <ul class="list-inline social-icons">
+              <li class="list-inline-item"><a href="https://www.facebook.com/El-Espejo-Espacio-Psicoterap%C3%A9utico-274649443003355/" aria-label="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+              <!--<li class="list-inline-item"><a href="https://twitter.com/themefisher" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="https://github.com/themefisher" aria-label="github"><i class="fab fa-github"></i></a></li>-->
+			  <li class="list-inline-item"><a href="https://instagram.com/el.espejo.rio4?igshid=11por4zixnxsk" aria-label="instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="https://wa.me/5493585185508/" aria-label="facebook" target="_blank"><i class="fab fa-whatsapp" ></i></a></li>
+             
+              
+            </ul>
+          </div>
+        </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container-fluid clearfix">
+      <div class="copyright-text" style="text-align: center">
+        <p align="center">&copy; Copyright 2021. Diseñado &amp; Desarrolado por <a href="http://www.dynamostudios.com.ar/" target="_blank">Dynamo Studios</a></p>
+      </div>
+     
+    </div>
+  </div>
+</footer>
+<!--End footer-main-->
+
+<!-- scroll-to-top -->
+<div id="back-to-top" class="back-to-top">
+  <i class="fa fa-angle-up"></i>
+</div>
+
+</div>
+<!--End pagewrapper-->
+
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target=".header-top">
+  <span class="icon fa fa-angle-up"></span>
+</div>
+
+
+<!-- jquery -->
+<script src="plugins/jquery.min.js"></script>
+<!-- bootstrap -->
+<script src="plugins/bootstrap/bootstrap.min.js"></script>
+<!-- Slick Slider -->
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/slick/slick-animation.min.js"></script>
+<!-- FancyBox -->
+<script src="plugins/fancybox/jquery.fancybox.min.js" defer></script>
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+<script src="plugins/google-map/gmap.js" defer></script>
+
+<!-- jquery-ui -->
+<script src="plugins/jquery-ui/jquery-ui.js" defer></script>
+<!-- timePicker -->
+<script src="plugins/timePicker/timePicker.js" defer></script>
+
+<!-- script js -->
+<script src="js/script.js"></script>
+	
+<!-- One page nav-->
+	
+	<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->
+	<!--[if gt IE 8]><!--><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script><!--<![endif]-->
+	<script src="js/jquery.nav.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#nav').onePageNav();
+		});
+	</script>
+	
+</body>
+
+</html>
+

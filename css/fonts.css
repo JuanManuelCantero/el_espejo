@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'goldie';
+    src: url("../fonts/Goldie Angle.woff2") format('woff2'),
+         url("../fonts/Goldie Angle.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
+.titulo
+{
+	font-family: goldie;
+	
+}
