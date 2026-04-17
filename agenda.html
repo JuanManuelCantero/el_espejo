@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+
+  <!-- ** Basic Page Needs ** -->
+  <meta charset="utf-8">
+  <title>Agenda - El Espejo | Espacio Psicoterapéutico</title>
+  <!-- Css fuentes -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- ** SEO & Meta ** -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Agenda para profesionales - El Espejo Espacio Psicoterapéutico">
+  <meta name="keywords" content="agenda, turnos, profesionales, El Espejo">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="El Espejo - Espacio Psicoterapéutico">
+  <meta name="theme-color" content="#3a7ca5">
+
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+  <!-- animate.css -->
+  <link rel="stylesheet" href="plugins/animation/animate.min.css">
+  <!-- jquery-ui -->
+  <link rel="stylesheet" href="plugins/jquery-ui/jquery-ui.css">
+  <!-- timePicker -->
+  <link rel="stylesheet" href="plugins/timePicker/timePicker.css">
+  <!-- Google Fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">	
+  <!-- Stylesheets -->
+  <link href="css/style.css" rel="stylesheet">
+  <!--Favicon-->
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+  <style>
+    .single-page-header {
+      background: linear-gradient(135deg, rgba(53, 131, 196, 0.72), rgba(242, 137, 21, 0.62)), url("images/slider/fachada/fachada1.jpeg");
+      background-size: cover;
+      background-position: center;
+      padding: 140px 0 70px;
+      position: relative;
+      color: #ffffff;
+      text-align: center;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .single-page-header .container {
+      position: relative;
+      z-index: 1;
+    }
+    .single-page-header h2 {
+      color: #ffffff;
+      font-size: 48px;
+      font-family: 'Dancing Script', cursive;
+      margin-bottom: 15px;
+      text-shadow: 0 12px 25px rgba(0,0,0,0.32);
+    }
+    body {
+      background: #f5f8fc;
+    }
+    .single-page-header p {
+      color: rgba(255,255,255,0.94);
+      font-size: 18px;
+      font-family: 'Work Sans', sans-serif;
+      max-width: 700px;
+      margin: 0 auto;
+      text-shadow: 0 8px 18px rgba(0,0,0,0.24);
+    }
+    .agenda-section {
+      padding: 70px 0 90px;
+      background: transparent;
+    }
+    .agenda-container {
+      max-width: 900px;
+      margin: -80px auto 0;
+      padding: 50px 45px;
+      background: rgba(255,255,255,0.98);
+      border-radius: 24px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+      border: 1px solid rgba(53,131,196,0.14);
+    }
+    .agenda-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 38px;
+      color: #222222;
+      font-family: 'Dancing Script', cursive;
+    }
+    .agenda-container label {
+      font-weight: 600;
+      color: #333333;
+      font-family: 'Work Sans', sans-serif;
+    }
+    .agenda-container .form-control {
+      border-radius: 8px;
+      border: 1px solid #e4e4e4;
+      padding: 14px 16px;
+      box-shadow: none;
+    }
+    .agenda-container button {
+      margin-top: 10px;
+    }
+    .turnos-list {
+      margin-top: 30px;
+    }
+    .turnos-list h3 {
+      font-family: 'Dancing Script', cursive;
+      color: #222222;
+      margin-bottom: 18px;
+    }
+    .turno-item {
+      padding: 16px;
+      border: 1px solid rgba(53,131,196,0.18);
+      margin-bottom: 14px;
+      border-radius: 12px;
+      background: #ffffff;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .turno-item strong {
+      font-weight: 600;
+      color: #3a7ca5;
+      font-family: 'Work Sans', sans-serif;
+    }
+    .turno-actions {
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .edit-tooltip {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 320px;
+      margin-top: 12px;
+      padding: 14px;
+      background: #fff;
+      border: 1px solid rgba(53,131,196,0.18);
+      border-radius: 14px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      z-index: 3;
+    }
+    .edit-tooltip label {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .edit-tooltip input {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #e4e4e4;
+      padding: 10px 12px;
+      margin-bottom: 10px;
+    }
+    .edit-tooltip .btn {
+      font-size: 13px;
+      padding: 8px 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+
+    <!--header top-->
+    <div class="header-top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 col-md-6">
+            <div class="top-left text-center text-md-left">
+              <h6 style="text-align: center">Horario: <strong> Lunes a Viernes, de 8 a 19</strong></h6>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="top-right text-center text-md-right">
+              <ul class="social-links">
+                <li>
+                  <a href="https://www.facebook.com/El-Espejo-Espacio-Psicoterap%C3%A9utico-274649443003355/" target="_blank" rel="noopener noreferrer" aria-label="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/el.espejo.rio4?igshid=11por4zixnxsk" target="_blank" rel="noopener noreferrer" aria-label="instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--header top-->
+
+    <!--Header Upper-->
+    <section class="header-uper">
+      <div class="container col-xl-12 row justify-content-center">
+        <div class="row align-items-center">
+          <div class="col-xl-12 col-lg-3">
+          </div>
+          <div class="col-xl-12 col-lg-9">
+            <div class="right-side">
+              <ul class="contact-info pl-0 mb-4 mb-md-0" style="margin-top: 10px; margin-bottom: 10px;">
+                <li class="item text-left logo">
+                  <img loading="lazy" class="img-fluid" src="images/logo/EL_ESPEJO_ISOLOGO_H_320px.png" style="margin-top: -30px" alt="logo">
+                </li>
+                <li class="item text-left">
+                  <div class="icon-box">
+                    <i class="far fa-envelope"></i>
+                  </div>
+                  <strong>Mail</strong>
+                  <br>
+                  <a href="mailto:info@centroelespejo.com.ar">
+                    <span>info@centroelespejo.com.ar</span>
+                  </a>
+                </li>
+                <li class="item text-left">
+                  <div class="icon-box">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <strong>Teléfono</strong>
+                  <br>
+                  <span><a href="tel:+543585185508">(3585) 185508</a></span>
+                </li>
+                <li class="item text-left">
+                  <div class="icon-box">
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                  <strong>Escribinos</strong>
+                  <br>
+                  <span><a href="https://wa.me/5493585185508/">Contacto directo!</a> </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Header Upper-->
+
+    <!-- Main Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container" id="Home">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarLinks">
+          <ul class="navbar-nav" id="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#sobre_el_epsejo">El Espejo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#galeria">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#caracteristicas">Metodologías</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#equipo">Nuestro Equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#faq">Información</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact">Contacto</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="login.html">Agenda</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="single-page-header">
+      <div class="container">
+        <h2>Agenda de Turnos</h2>
+        <p>Gestioná tus turnos con la misma estética profesional y los tonos cálidos de El Espejo.</p>
+      </div>
+    </section>
+
+    <!-- Agenda Section -->
+    <section class="agenda-section">
+      <div class="container">
+        <div class="agenda-container">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 id="welcomeMessage">Bienvenido</h2>
+            <a class="btn btn-style-two" href="login.html">Cerrar Sesión</a>
+          </div>
+          <form id="turnoForm">
+            <div class="form-group">
+              <label for="fecha">Fecha:</label>
+              <input type="date" class="form-control" id="fecha" required>
+            </div>
+            <div class="form-group">
+              <label for="hora">Hora:</label>
+              <input type="time" class="form-control" id="hora" min="08:00" max="19:00" step="1800" required>
+            </div>
+            <div class="form-group">
+              <label for="paciente">Paciente:</label>
+              <input type="text" class="form-control" id="paciente" required>
+            </div>
+            <button type="submit" class="btn btn-style-one">Agregar Turno</button>
+          </form>
+          <div class="turnos-list">
+            <h3>Turnos Agendados</h3>
+            <div id="turnosContainer"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+      <div class="container-fluid">
+        <div style="float: left"><img loading="lazy" class="img-fluid" style="max-width:210px; margin-bottom: 20px" src="images/logo/EL_ESPEJO_ISOLOGO2-02-trans-vertical.png" alt="el espejo"></div>
+        <div class="footer-top" >
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="about-widget">
+                  <ul class="location-link">
+                    <li class="item">
+                      <div class="media-body">
+                        <h3 style="color: whitesmoke">Email</h3>
+                      </div>
+                      <i class="far fa-envelope" aria-hidden="true"></i>
+                      <a href="mailto:contacto@centroelespejo.com.ar">
+                        <p>contacto@centroelespejo.com.ar</p>
+                      </a>
+                    </li>
+                    <li class="item">
+                      <div class="media-body">
+                        <h3 style="color: whitesmoke">Teléfono</h3>
+                      </div>
+                      <i class="fas fa-phone" aria-hidden="true"></i>
+                      <p >(3585) 185508</p>
+                    </li>
+                    <li class="item">
+                      <div class="media-body">
+                        <h3 style="color: whitesmoke">Ubicación</h3>
+                      </div>
+                      <i class="fas fa-map-pin" aria-hidden="true"></i>
+                      <p >9 de Julio 202, Río Cuarto, Córdoba, Argentina</p>
+                    </li>
+                  </ul>
+                  <ul class="list-inline social-icons">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/El-Espejo-Espacio-Psicoterap%C3%A9utico-274649443003355/" aria-label="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a href="https://instagram.com/el.espejo.rio4?igshid=11por4zixnxsk" aria-label="instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="https://wa.me/5493585185508/" aria-label="whatsapp" target="_blank"><i class="fab fa-whatsapp" ></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container-fluid clearfix">
+            <div class="copyright-text" style="text-align: center">
+              <p align="center">&copy; Copyright 2021. Diseñado &amp; Desarrolado por <a href="http://www.dynamostudios.com.ar/" target="_blank">Dynamo Studios</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- jQuery -->
+  <script src="plugins/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- jQuery UI -->
+  <script src="plugins/jquery-ui/jquery-ui.js"></script>
+  <!-- timePicker -->
+  <script src="plugins/timePicker/timePicker.js"></script>
+
+  <script>
+    const users = {
+      'juan': { password: 'pass123', name: 'Dr. Juan Pérez' },
+      'maria': { password: 'pass123', name: 'Dra. María García' },
+      'ana': { password: 'pass123', name: 'Lic. Ana López' }
+    };
+
+    // Get user from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    let user = urlParams.get('user');
+    if (!user) {
+      user = localStorage.getItem('agendaUser');
+    }
+    if (!user || !users[user]) {
+      window.location.href = 'login.html';
+    }
+
+    localStorage.setItem('agendaUser', user);
+    document.getElementById('welcomeMessage').textContent = 'Bienvenido, ' + users[user].name;
+
+    // Set default date and time values
+    const fechaInput = document.getElementById('fecha');
+    const horaInput = document.getElementById('hora');
+    const today = new Date().toISOString().substr(0, 10);
+    if (!fechaInput.value) {
+      fechaInput.value = today;
+    }
+    if (!horaInput.value) {
+      horaInput.value = '08:00';
+    }
+
+    // Load turnos from localStorage
+    function loadTurnos() {
+      const turnos = JSON.parse(localStorage.getItem('turnos_' + user) || '[]');
+      const container = document.getElementById('turnosContainer');
+      container.innerHTML = '';
+      if (!turnos.length) {
+        container.innerHTML = '<p>No hay turnos agendados.</p>';
+        return;
+      }
+      turnos.forEach((turno, index) => {
+        const div = document.createElement('div');
+        div.className = 'turno-item';
+        div.innerHTML = `
+          <div>
+            <strong>${turno.fecha} ${turno.hora}</strong> - ${turno.paciente}
+          </div>
+          <div class="turno-actions">
+            <button type="button" class="btn btn-style-two btn-sm" onclick="openEditTooltip(${index})">Editar</button>
+            <button type="button" class="btn btn-danger btn-sm" onclick="deleteTurno(${index})">Eliminar</button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    // Add turno
+    document.getElementById('turnoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const fecha = document.getElementById('fecha').value;
+      const hora = document.getElementById('hora').value;
+      const paciente = document.getElementById('paciente').value;
+
+      if (!fecha || !hora || !paciente) return;
+
+      const turnos = JSON.parse(localStorage.getItem('turnos_' + user) || '[]');
+      turnos.push({ fecha, hora, paciente });
+      localStorage.setItem('turnos_' + user, JSON.stringify(turnos));
+
+      loadTurnos();
+      this.reset();
+    });
+
+    // Delete turno
+    function deleteTurno(index) {
+      const turnos = JSON.parse(localStorage.getItem('turnos_' + user) || '[]');
+      turnos.splice(index, 1);
+      localStorage.setItem('turnos_' + user, JSON.stringify(turnos));
+      loadTurnos();
+    }
+
+    function openEditTooltip(index) {
+      closeEditTooltip();
+      const turnos = JSON.parse(localStorage.getItem('turnos_' + user) || '[]');
+      const turno = turnos[index];
+      const container = document.getElementById('turnosContainer');
+      const item = container.children[index];
+
+      if (!item) return;
+      const tooltip = document.createElement('div');
+      tooltip.className = 'edit-tooltip';
+      tooltip.innerHTML = `
+        <label for="edit-fecha">Fecha</label>
+        <input id="edit-fecha" type="text" value="${turno.fecha}" />
+        <label for="edit-hora">Hora</label>
+        <input id="edit-hora" type="text" value="${turno.hora}" />
+        <label for="edit-paciente">Paciente</label>
+        <input id="edit-paciente" type="text" value="${turno.paciente}" />
+        <div class="d-flex justify-content-end" style="gap:8px;">
+          <button type="button" class="btn btn-style-two btn-sm" onclick="closeEditTooltip()">Cancelar</button>
+          <button type="button" class="btn btn-style-one btn-sm" onclick="saveEditedTurno(${index})">Guardar</button>
+        </div>
+      `;
+      item.appendChild(tooltip);
+    }
+
+    function closeEditTooltip() {
+      const existing = document.querySelector('.edit-tooltip');
+      if (existing) {
+        existing.remove();
+      }
+    }
+
+    function saveEditedTurno(index) {
+      const fecha = document.getElementById('edit-fecha').value.trim();
+      const hora = document.getElementById('edit-hora').value.trim();
+      const paciente = document.getElementById('edit-paciente').value.trim();
+      if (!fecha || !hora || !paciente) return;
+      const turnos = JSON.parse(localStorage.getItem('turnos_' + user) || '[]');
+      turnos[index] = { fecha, hora, paciente };
+      localStorage.setItem('turnos_' + user, JSON.stringify(turnos));
+      closeEditTooltip();
+      loadTurnos();
+    }
+
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('.turno-item') && !event.target.closest('.edit-tooltip')) {
+        closeEditTooltip();
+      }
+    });
+
+    loadTurnos();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+# ============================================================
+# CONFIGURACIÓN DE SEGURIDAD Y OPTIMIZACIÓN APACHE
+# ============================================================
+# Este archivo debe estar en la raíz del proyecto
+# Requiere que mod_rewrite esté habilitado en el servidor
+
+# === HABILITAR MOD_REWRITE ===
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # === REDIRIGIR VERSIONES HTML A PHP (PRINCIPALES) ===
+    # Las versiones HTML estáticas son solo referencias de diseño
+    # Las versiones PHP tienen la lógica y seguridad
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^login\.html$ /login.php [R=301,L]
+    RewriteRule ^agenda\.html$ /agenda.php [R=301,L]
+    RewriteRule ^admin\.html$ /admin.php [R=301,L]
+    
+    # === REDIRIGIR HTTP A HTTPS (DESCOMENTA SI TIENES SSL) ===
+    # RewriteCond %{HTTPS} off
+    # RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # === BLOQUEAR ACCESO A ARCHIVOS Y DIRECTORIOS SENSIBLES ===
+    RewriteRule ^\.env$ - [F]
+    RewriteRule ^config\.php$ - [F]
+    RewriteRule ^\.git - [F]
+    RewriteRule ^\.gitignore$ - [F]
+    RewriteRule ^REPORTE_REVISION\.md$ - [F]
+    RewriteRule ^GUIA_SEGURIDAD\.md$ - [F]
+    RewriteRule ^RESUMEN_IMPLEMENTACION\.md$ - [F]
+    
+    # Bloquear acceso a directorios sensibles
+    RewriteRule ^sessions/ - [F]
+    RewriteRule ^logs/ - [F]
+    RewriteRule ^data/ - [F]
+    
+    # Permitir que admin.html solo sea accesible con sesión (parcialmente)
+    # Para mayor seguridad, considera eliminar admin.html después de autenticación
+</IfModule>
+
+# === PROTEGER ARCHIVOS DIRECTAMENTE ===
+<FilesMatch "^(config|admin_api)\.php$">
+    Order allow,deny
+    Deny from all
+    # Comentar línea anterior e implementar validación PHP es más seguro
+    Allow from env=AUTHORIZED
+</FilesMatch>
+
+# === HEADERS DE SEGURIDAD ===
+<IfModule mod_headers.c>
+    
+    # === Content Security Policy (CSP) ===
+    # Previene inyección de scripts y otros ataques
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://code.jquery.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.googletagmanager.com; frame-ancestors 'none';"
+    
+    # === Prevenir Clickjacking ===
+    # Impide que el sitio sea embebido en iframes
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # === Prevenir MIME Sniffing ===
+    # El navegador no debe adivinar el tipo de contenido
+    Header set X-Content-Type-Options "nosniff"
+    
+    # === XSS Protection (Navegadores antiguos) ===
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # === Referrer Policy ===
+    # Controla qué información se envía en el header Referer
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # === Remover información del servidor ===
+    Header always unset X-Powered-By
+    Header unset X-Powered-By
+    Header always unset Server
+    Header unset Server
+    
+    # === HSTS (HTTPS Strict Transport Security) ===
+    # DESCOMENTA SOLO DESPUÉS DE IMPLEMENTAR HTTPS CORRECTAMENTE
+    # Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # === Feature Policy / Permissions Policy ===
+    Header set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+    
+</IfModule>
+
+# === DENY DIRECTORY LISTINGS ===
+Options -Indexes
+
+# === COMPRESSION GZIP ===
+<IfModule mod_deflate.c>
+    # Comprimir HTML, CSS, JavaScript, XML
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+    AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+    AddOutputFilterByType DEFLATE image/svg+xml font/woff font/woff2
+    
+    # No comprimir imágenes ya comprimidas
+    SetEnvIfNoCase Request_URI \
+        \.(?:gif|jpe?g|png|webp)$ no-gzip dont-vary
+</IfModule>
+
+# === CACHING ===
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # HTML - 1 hora
+    ExpiresByType text/html "access plus 1 hour"
+    
+    # CSS y JavaScript - 1 semana
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType text/javascript "access plus 1 week"
+    
+    # Imágenes - 1 mes
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # Fuentes - 1 año (raramente cambian)
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    
+    # Default
+    ExpiresDefault "access plus 2 days"
+</IfModule>
+
+# === GZIP COMPRESSION HEADERS ===
+<IfModule mod_headers.c>
+    <FilesMatch "\.(js|css|svg|woff|woff2|ttf|otf)$">
+        Header append Vary Accept-Encoding
+    </FilesMatch>
+</IfModule>
+
+# === ETAG ===
+<IfModule mod_headers.c>
+    FileETag MTime Size
+    Header unset ETag
+</IfModule>
+
+# === PREVENIR ACCESO A ARCHIVOS ESPECÍFICOS ===
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "\.(exe|com|bat|sh|zip|tar|rar|tmp|bak)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# === PROTECCIÓN CONTRA ATAQUES COMUNES ===
+<IfModule mod_rewrite.c>
+    # Prevenir SQL Injection
+    RewriteRule ^(.*)(\?\?|%3F%3F)(.*)$ - [F]
+    
+    # Prevenir acceso a archivos PHP en ciertos directorios
+    RewriteRule ^plugins/.*\.php$ - [F]
+    RewriteRule ^inc/.*\.php$ - [F]
+    
+    # Remover variables GET sospechosas
+    RewriteRule ^(.*)(\$|\&\#)[0-9](.*)$ - [F]
+</IfModule>

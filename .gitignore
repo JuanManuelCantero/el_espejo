@@ -1,0 +1,24 @@
+# Directorios de datos y sesiones
+/sessions/
+/data/*.json
+/logs/
+
+# Archivos de configuración con credenciales
+.env
+.env.local
+*.key
+*.pem
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backups antiguos
+*_old.*
+*.bak

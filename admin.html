@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <title>Administración de Usuarios - El Espejo</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="plugins/animation/animate.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">	
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+  <style>
+    .header-top { border-bottom: none !important; background: #ffffff; }
+    .header-uper { border-bottom: none !important; background: #ffffff; }
+    .navbar, .navbar .navbar-collapse { border-bottom: none !important; box-shadow: none !important; }
+    .single-page-header {
+      background: linear-gradient(135deg, rgba(53, 131, 196, 0.72), rgba(242, 137, 21, 0.62)), url("images/slider/fachada/fachada1.jpeg");
+      background-size: cover; background-position: center; padding: 120px 0 70px; position: relative; color: #ffffff; text-align: center;
+    }
+    .single-page-header h2 { color: #ffffff; font-size: 44px; font-family: 'Dancing Script', cursive; margin-bottom: 15px; }
+    .single-page-header p { color: rgba(255,255,255,0.92); font-size: 18px; font-family: 'Work Sans', sans-serif; max-width: 700px; margin: 0 auto; }
+    .admin-container {
+      max-width: 1000px; margin: 40px auto 0; padding: 50px 45px; background: rgba(255,255,255,0.98); border-radius: 24px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.08); border: 1px solid rgba(53,131,196,0.14);
+    }
+    .form-section { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid #e0e0e0; }
+    .form-section h2 { font-size: 32px; margin-bottom: 20px; color: #222222; font-family: 'Dancing Script', cursive; }
+    .form-group label { font-weight: 600; color: #333333; margin-bottom: 8px; }
+    .form-control { border-radius: 8px; border: 1px solid #e4e4e4; padding: 14px 16px; box-shadow: none; background: #f8fbff; }
+    .form-control:focus { border-color: #3583C4; box-shadow: 0 0 0 3px rgba(53, 131, 196, 0.12); }
+    .btn-success { background: #28a745; border-radius: 8px; font-weight: 700; border: none; }
+    .btn-success:hover { background: #218838; }
+    .btn-primary { background: #3583C4; border-radius: 8px; font-weight: 700; border: none; }
+    .btn-primary:hover { background: #2a6a9e; }
+    .btn-danger { background: #d64541; border-radius: 8px; font-weight: 700; border: none; }
+    .btn-danger:hover { background: #b93532; }
+    .btn-secondary { background: #6c757d; border-radius: 8px; font-weight: 700; border: none; }
+    .btn-secondary:hover { background: #5a6268; }
+    .usuarios-list { margin-top: 40px; }
+    .usuarios-list h2 { font-family: 'Dancing Script', cursive; font-size: 32px; color: #222222; margin-bottom: 24px; }
+    .usuario-card { background: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 12px; padding: 16px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .usuario-info { flex: 1; }
+    .usuario-info h3 { margin: 0 0 4px; font-size: 16px; font-weight: 700; color: #222; }
+    .usuario-info p { margin: 0; font-size: 14px; color: #666; }
+    .usuario-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; background: #e8f4f8; color: #3583C4; margin: 4px 0 0; }
+    .usuario-actions { display: flex; gap: 8px; flex-shrink: 0; }
+    .usuario-actions .btn { padding: 8px 14px; font-size: 13px; }
+    .alert { border-radius: 8px; margin-bottom: 20px; }
+    .modal-content { border: none; border-radius: 12px; }
+    .modal-header { border-bottom: 1px solid #e0e0e0; background: #f9f9f9; }
+    .modal-header h5 { font-family: 'Dancing Script', cursive; font-size: 24px; color: #222; }
+    .footer-main { margin-top: 70px; }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!--header top-->
+    <div class="header-top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12 col-md-6">
+            <div class="top-left text-center text-md-left">
+              <h6 style="text-align: center">Horario: <strong> Lunes a Viernes, de 8 a 19</strong></h6>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="top-right text-center text-md-right">
+              <ul class="social-links">
+                <li>
+                  <a href="https://www.facebook.com/El-Espejo-Espacio-Psicoterap%C3%A9utico-274649443003355/" target="_blank" rel="noopener noreferrer" aria-label="facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/el.espejo.rio4?igshid=11por4zixnxsk" target="_blank" rel="noopener noreferrer" aria-label="instagram">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Header Upper-->
+    <section class="header-uper">
+      <div class="container col-xl-12 row justify-content-center">
+        <div class="row align-items-center">
+          <div class="col-xl-12 col-lg-3"></div>
+          <div class="col-xl-12 col-lg-9">
+            <div class="right-side">
+              <ul class="contact-info pl-0 mb-4 mb-md-0" style="margin-top: 10px; margin-bottom: 10px;">
+                <li class="item text-left logo">
+                  <img loading="lazy" class="img-fluid" src="images/logo/EL_ESPEJO_ISOLOGO_H_320px.png" style="margin-top: -30px" alt="logo">
+                </li>
+                <li class="item text-left">
+                  <div class="icon-box">
+                    <i class="far fa-envelope"></i>
+                  </div>
+                  <strong>Mail</strong>
+                  <br>
+                  <a href="mailto:info@centroelespejo.com.ar">
+                    <span>info@centroelespejo.com.ar</span>
+                  </a>
+                </li>
+                <li class="item text-left">
+                  <div class="icon-box">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <strong>Teléfono</strong>
+                  <br>
+                  <span><a href="tel:+543585185508">(3585) 185508</a></span>
+                </li>
+                <li class="item text-left">
+                  <div class="icon-box">
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                  <strong>Escribinos</strong>
+                  <br>
+                  <span><a href="https://wa.me/5493585185508/">Contacto directo!</a> </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Main Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container" id="Home">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLinks" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarLinks">
+          <ul class="navbar-nav" id="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#sobre_el_epsejo">El Espejo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#galeria">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#caracteristicas">Metodologías</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#equipo">Nuestro Equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#faq">Información</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Agenda</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="admin.html">Administración</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="single-page-header">
+      <div class="container">
+        <h2>Administración de Usuarios</h2>
+        <p>Gestiona los usuarios que acceden a la plataforma de turnos y agenda.</p>
+      </div>
+    </section>
+    <!-- Admin Content -->
+    <section class="agenda-section">
+      <div class="container">
+        <div class="admin-container">
+          <div id="alertContainer"></div>
+          <!-- Crear usuario -->
+          <div class="form-section">
+            <h2>Nuevo Usuario</h2>
+            <form id="newUserForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="newUsername">Usuario:</label>
+                    <input type="text" class="form-control" id="newUsername" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="newPassword">Contraseña:</label>
+                    <input type="password" class="form-control" id="newPassword" required>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="newName">Nombre Completo:</label>
+                <input type="text" class="form-control" id="newName" required>
+              </div>
+              <button type="submit" class="btn btn-success">Crear Usuario</button>
+            </form>
+          </div>
+          <!-- Lista de usuarios -->
+          <div class="usuarios-list">
+            <h2>Usuarios Registrados</h2>
+            <div id="usuariosContainer"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer-main">
+      <div class="container-fluid">
+        <div style="float: left"><img loading="lazy" class="img-fluid" style="max-width:210px; margin-bottom: 20px" src="images/logo/EL_ESPEJO_ISOLOGO2-02-trans-vertical.png" alt="el espejo"></div>
+        <div class="footer-top" >
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-lg-4 mb-5 mb-lg-0">
+                <div class="about-widget">
+                  <ul class="location-link">
+                    <li class="item">
+                      <div class="media-body">
+                        <h3 style="color: whitesmoke">Email</h3>
+                      </div>
+                      <i class="far fa-envelope" aria-hidden="true"></i>
+                      <a href="mailto:contacto@centroelespejo.com.ar">
+                        <p>contacto@centroelespejo.com.ar</p>
+                      </a>
+                    </li>
+                    <li class="item">
+                      <div class="media-body">
+                        <h3 style="color: whitesmoke">Teléfono</h3>
+                      </div>
+                      <i class="fas fa-phone" aria-hidden="true"></i>
+                      <p >(3585) 185508</p>
+                    </li>
+                    <li class="item">
+                      <div class="media-body">
+                        <h3 style="color: whitesmoke">Ubicación</h3>
+                      </div>
+                      <i class="fas fa-map-pin" aria-hidden="true"></i>
+                      <p >9 de Julio 202, Río Cuarto, Córdoba, Argentina</p>
+                    </li>
+                  </ul>
+                  <ul class="list-inline social-icons">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/El-Espejo-Espacio-Psicoterap%C3%A9utico-274649443003355/" aria-label="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a href="https://instagram.com/el.espejo.rio4?igshid=11por4zixnxsk" aria-label="instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="https://wa.me/5493585185508/" aria-label="whatsapp" target="_blank"><i class="fab fa-whatsapp" ></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container-fluid clearfix">
+            <div class="copyright-text" style="text-align: center">
+              <p align="center">&copy; Copyright 2021. Diseñado &amp; Desarrolado por <a href="http://www.dynamostudios.com.ar/" target="_blank">Dynamo Studios</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal para editar -->
+  <div class="modal fade" id="editModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar Usuario</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="editUserForm">
+            <input type="hidden" id="editUserId">
+            <div class="form-group">
+              <label for="editUsername">Usuario:</label>
+              <input type="text" class="form-control" id="editUsername" disabled>
+            </div>
+            <div class="form-group">
+              <label for="editPassword">Contraseña:</label>
+              <input type="password" class="form-control" id="editPassword" placeholder="Dejar vacío para no cambiar">
+            </div>
+            <div class="form-group">
+              <label for="editName">Nombre Completo:</label>
+              <input type="text" class="form-control" id="editName" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" onclick="saveEditUser()">Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="plugins/jquery.min.js"></script>
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <script>
+    const ADMIN_USER = 'admin';
+    const ADMIN_PASS = 'admin123';
+
+    // Verificar acceso admin
+    if (sessionStorage.getItem('adminLoggedIn') !== 'true') {
+      const user = prompt('Usuario admin:');
+      const pass = prompt('Contraseña:');
+      if (user === ADMIN_USER && pass === ADMIN_PASS) {
+        sessionStorage.setItem('adminLoggedIn', 'true');
+      } else {
+        alert('Acceso denegado');
+        window.location.href = 'index.html';
+      }
+    }
+
+    // Cargar usuarios
+    function loadUsuarios() {
+      fetch('admin_api.php?action=list')
+        .then(r => r.json())
+        .then(data => {
+          const container = document.getElementById('usuariosContainer');
+          container.innerHTML = '';
+          if (!data.success || !data.usuarios.length) {
+            container.innerHTML = '<p>No hay usuarios registrados.</p>';
+            return;
+          }
+          data.usuarios.forEach(usuario => {
+            const card = document.createElement('div');
+            card.className = 'usuario-card';
+            card.innerHTML = `
+              <div class="usuario-info">
+                <h3>${usuario.username}</h3>
+                <p>${usuario.name}</p>
+                ${usuario.is_admin ? '<span class="usuario-badge">Admin</span>' : ''}
+              </div>
+              <div class="usuario-actions">
+                <button class="btn btn-primary btn-sm" onclick="editUsuario('${usuario.username}', '${usuario.name}')">Editar</button>
+                <button class="btn btn-danger btn-sm" onclick="deleteUsuario('${usuario.username}')">Eliminar</button>
+              </div>
+            `;
+            container.appendChild(card);
+          });
+        })
+        .catch(e => showAlert('Error al cargar usuarios: ' + e.message, 'danger'));
+    }
+
+    // Crear usuario
+    document.getElementById('newUserForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('newUsername').value.trim();
+      const password = document.getElementById('newPassword').value.trim();
+      const name = document.getElementById('newName').value.trim();
+
+      if (!username || !password || !name) return;
+
+      fetch('admin_api.php?action=create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password, name })
+      })
+        .then(r => r.json())
+        .then(data => {
+          if (data.success) {
+            showAlert('Usuario creado exitosamente', 'success');
+            this.reset();
+            loadUsuarios();
+          } else {
+            showAlert(data.message || 'Error al crear usuario', 'danger');
+          }
+        });
+    });
+
+    // Editar usuario
+    function editUsuario(username, name) {
+      document.getElementById('editUserId').value = username;
+      document.getElementById('editUsername').value = username;
+      document.getElementById('editName').value = name;
+      document.getElementById('editPassword').value = '';
+      $('#editModal').modal('show');
+    }
+
+    function saveEditUser() {
+      const username = document.getElementById('editUserId').value;
+      const password = document.getElementById('editPassword').value.trim();
+      const name = document.getElementById('editName').value.trim();
+
+      if (!name) return;
+
+      fetch('admin_api.php?action=update', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password, name })
+      })
+        .then(r => r.json())
+        .then(data => {
+          if (data.success) {
+            showAlert('Usuario actualizado', 'success');
+            $('#editModal').modal('hide');
+            loadUsuarios();
+          } else {
+            showAlert(data.message || 'Error al actualizar', 'danger');
+          }
+        });
+    }
+
+    // Eliminar usuario
+    function deleteUsuario(username) {
+      if (!confirm('¿Estás seguro de que quieres eliminar este usuario?')) return;
+
+      fetch('admin_api.php?action=delete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username })
+      })
+        .then(r => r.json())
+        .then(data => {
+          if (data.success) {
+            showAlert('Usuario eliminado', 'success');
+            loadUsuarios();
+          } else {
+            showAlert(data.message || 'Error al eliminar', 'danger');
+          }
+        });
+    }
+
+    // Mostrar alerta
+    function showAlert(message, type) {
+      const alert = document.createElement('div');
+      alert.className = `alert alert-${type} alert-dismissible fade show`;
+      alert.innerHTML = `
+        ${message}
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+      `;
+      document.getElementById('alertContainer').appendChild(alert);
+      setTimeout(() => alert.remove(), 5000);
+    }
+
+    // Logout
+    function logout() {
+      sessionStorage.removeItem('adminLoggedIn');
+      window.location.href = 'index.html';
+    }
+
+    // Cargar usuarios al iniciar
+    loadUsuarios();
+  </script>
+</body>
+</html>

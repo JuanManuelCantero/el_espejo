@@ -251,13 +251,14 @@ li {
 }
 
 .single-page-header:before {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
   position: absolute;
   content: '';
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
+  display: none;
 }
 
 .header-top {
@@ -398,6 +399,7 @@ li {
   font-size: 17px;
   color: #fff;
   text-transform: uppercase;
+  white-space: nowrap;
   padding: 13px 18px !important;
   transition: .3s;
 }
@@ -637,11 +639,12 @@ button:focus {
 
 .hero-slider .slider-item:before {
   position: absolute;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
   content: '';
   top: 0;
   height: 100%;
   width: 100%;
+  display: none;
 }
 
 .hero-slider .content {

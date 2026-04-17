@@ -1,16 +1,20 @@
 <?php
 /* Configure your twitter API access params below */
-// Your Twitter App Consumer Key
-$consumer_key = 'O1MpyNUKaV6m5eI3zBozh4xhh';
+// IMPORTANTE: Estas credenciales deben ser reemplazadas con valores reales
+// y NUNCA versionadas en control de versiones públicos.
+// Usar variables de entorno o archivo .env en producción.
 
-// Your Twitter App Consumer Secret
-$consumer_secret = 'H8gRYxPwypaPPDYFG6CfnhH0ioiOznOkKGxXhXbvNcpvwIBFkY';
+// Your Twitter App Consumer Key - CAMBIAR POR VALOR REAL
+$consumer_key = getenv('TWITTER_CONSUMER_KEY') ?: 'PLACEHOLDER_CONSUMER_KEY_CHANGE_ME';
 
-// Your Twitter App Access Token
-$user_token = '858711673-faHBplLJ8q1I5LnVItfkxo9I9Rx3z4bU6ewaIvHj';
+// Your Twitter App Consumer Secret - CAMBIAR POR VALOR REAL
+$consumer_secret = getenv('TWITTER_CONSUMER_SECRET') ?: 'PLACEHOLDER_CONSUMER_SECRET_CHANGE_ME';
 
-// Your Twitter App Access Token Secret
-$user_secret = 'XCpfOrvi4bwCeSSNxhJlbfPb5tgWkexSj5ZtrZluWTJco';
+// Your Twitter App Access Token - CAMBIAR POR VALOR REAL
+$user_token = getenv('TWITTER_ACCESS_TOKEN') ?: 'PLACEHOLDER_ACCESS_TOKEN_CHANGE_ME';
+
+// Your Twitter App Access Token Secret - CAMBIAR POR VALOR REAL
+$user_secret = getenv('TWITTER_TOKEN_SECRET') ?: 'PLACEHOLDER_TOKEN_SECRET_CHANGE_ME';
 
 
 
@@ -39,16 +43,16 @@ class ezTweet {
 	/*************************************** config ***************************************/
 
 	// Your Twitter App Consumer Key
-	private $consumer_key = 'O1MpyNUKaV6m5eI3zBozh4xhh';
+	private $consumer_key = 'PLACEHOLDER_CONSUMER_KEY_CHANGE_ME';
 
 	// Your Twitter App Consumer Secret
-	private $consumer_secret = 'H8gRYxPwypaPPDYFG6CfnhH0ioiOznOkKGxXhXbvNcpvwIBFkY';
+	private $consumer_secret = 'PLACEHOLDER_CONSUMER_SECRET_CHANGE_ME';
 
 	// Your Twitter App Access Token
-	private $user_token = '858711673-faHBplLJ8q1I5LnVItfkxo9I9Rx3z4bU6ewaIvHj';
+	private $user_token = 'PLACEHOLDER_ACCESS_TOKEN_CHANGE_ME';
 
 	// Your Twitter App Access Token Secret
-	private $user_secret = 'XCpfOrvi4bwCeSSNxhJlbfPb5tgWkexSj5ZtrZluWTJco';
+	private $user_secret = 'PLACEHOLDER_TOKEN_SECRET_CHANGE_ME';
 
 	// Path to tmhOAuth libraries
 	private $lib = './lib/';
