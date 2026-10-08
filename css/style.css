@@ -1715,15 +1715,23 @@ button:focus {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .team-section .team-member img {
   width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .team-section .team-member .contents {
   background: #fff;
   padding: 35px 10px;
+  min-height: 245px;
+  flex: 1;
 }
 
 .team-section .team-member .contents h4 {
@@ -2732,6 +2740,9 @@ button:focus {
 
 .gallery .gallery-item img {
   width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .gallery .gallery-item:before {
@@ -2946,6 +2957,47 @@ button:focus {
   height: 100%;
   position: absolute;
   /*background: rgba(19, 38, 70, 0.1);*/
+}
+
+.page-title.team-banner-title {
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #1f3546;
+}
+
+.team-banner {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3px;
+}
+
+.team-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.page-title.team-banner-title:before {
+  background: rgba(19, 38, 70, 0.48);
+  z-index: 1;
+}
+
+.page-title.team-banner-title .container {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .team-banner {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
 }
 
 .page-title .title-text h1 {
