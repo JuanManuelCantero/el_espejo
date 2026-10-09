@@ -1715,15 +1715,23 @@ button:focus {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .team-section .team-member img {
   width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .team-section .team-member .contents {
   background: #fff;
   padding: 35px 10px;
+  min-height: 245px;
+  flex: 1;
 }
 
 .team-section .team-member .contents h4 {
@@ -2732,6 +2740,9 @@ button:focus {
 
 .gallery .gallery-item img {
   width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .gallery .gallery-item:before {
@@ -2948,6 +2959,58 @@ button:focus {
   /*background: rgba(19, 38, 70, 0.1);*/
 }
 
+.page-title.team-banner-title {
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #1f3546;
+}
+
+.team-banner {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr;
+  gap: 3px;
+}
+
+.team-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.page-title.team-banner-title:before {
+  background: rgba(19, 38, 70, 0.48);
+  z-index: 1;
+}
+
+.page-title.team-banner-title .container {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .team-banner {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.map-embed {
+  line-height: 0;
+}
+
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 350px;
+  border: 0;
+}
+
 .page-title .title-text h1 {
   position: relative;
   font-size: 40px;
@@ -3033,8 +3096,112 @@ button:focus {
 }
 
 .footer-main .footer-top {
-  padding-top: 15px;
-  padding-bottom: 30px;
+  padding: 18px 0;
+}
+
+.footer-main .footer-content {
+  display: grid;
+  grid-template-columns: minmax(120px, 150px) repeat(3, minmax(150px, 1fr)) auto;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-main .footer-brand {
+  display: block;
+}
+
+.footer-main .footer-brand img {
+  display: block;
+  width: 100%;
+  max-width: 145px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.footer-main .footer-contact {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.footer-main .footer-contact > i {
+  flex: 0 0 auto;
+  margin-top: 4px;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.footer-main .footer-contact h3 {
+  margin: 0 0 2px;
+  color: #ffffff;
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: none;
+}
+
+.footer-main .footer-contact p,
+.footer-main .footer-contact a {
+  display: block;
+  margin: 0;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.footer-main .footer-contact a:hover,
+.footer-main .footer-contact a:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-main .footer-contact span {
+  color: #dbeeff;
+}
+
+.footer-main .footer-top .social-icons {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.footer-main .footer-top .social-icons li {
+  margin: 0 3px;
+}
+
+@media only screen and (max-width: 991px) {
+  .footer-main .footer-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 32px;
+  }
+
+  .footer-main .footer-brand {
+    justify-self: center;
+  }
+
+  .footer-main .footer-top .social-icons {
+    justify-self: start;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .footer-main .footer-content {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .footer-main .footer-contact {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .footer-main .footer-top .social-icons {
+    justify-self: center;
+  }
 }
 
 .footer-main .footer-top .footer-logo {
@@ -3080,7 +3247,7 @@ button:focus {
 }
 
 .footer-main .footer-top .social-icons {
-  margin-top: 20px;
+  margin-top: 0;
 }
 
 .footer-main .footer-top .social-icons li a {
@@ -3216,6 +3383,7 @@ button:focus {
 .footer-bottom {
   padding: 24px 0px;
   background: #F28915;
+  box-shadow: 0 -7px 16px rgba(0, 0, 0, 0.2);
 }
 
 .footer-bottom .copyright-text {
@@ -3293,31 +3461,40 @@ button:focus {
 
 .back-to-top {
   position: fixed;
-  bottom: 30px;
+  bottom: 100px;
   right: 30px;
   z-index: 999;
-  height: 40px;
-  width: 40px;
+  height: 46px;
+  width: 46px;
+  padding: 0;
+  border: 2px solid #ffffff;
   background: #3583C4;
   border-radius: 50%;
   text-align: center;
-  line-height: 40px;
+  line-height: 42px;
   color: white;
+  font-size: 22px;
   cursor: pointer;
-  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, transform 0.3s ease;
   display: none;
 }
 
 @media (max-width: 575px) {
   .back-to-top {
-    bottom: 15px;
+    bottom: 86px;
     right: 15px;
   }
 }
 
 .back-to-top:hover {
   background-color: #F28915;
-	border: 2px dashed #ffffff;
+  transform: translateY(-3px);
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
 }
 
 /*  Theme HTML Template */
